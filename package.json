@@ -1,46 +1,69 @@
 {
-  "name": "vue-nav-side",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-  },
-  "dependencies": {
-    "vue": "^2.5.16"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.0-beta.15",
-    "@vue/cli-plugin-eslint": "^3.0.0-beta.15",
-    "@vue/cli-service": "^3.0.0-beta.15",
-    "@vue/eslint-config-prettier": "^3.0.0-rc.2",
-    "node-sass": "^4.9.0",
-    "sass-loader": "^7.0.1",
-    "vue-template-compiler": "^2.5.16"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "@vue/prettier"
-    ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+	"name": "vue-nav-side",
+	"version": "0.1.0",
+	"description": "Minimalist side navigation component for Vue",
+	"author": "richardtallent <richard@tallent.us>",
+	"license": "MIT",
+	"main": "dist/vue-nav-side.js",
+	"repository": "https://github.com/richardtallent/vue-nav-side",
+	"private": false,
+	"scripts": {
+		"serve": "vue-cli-service serve",
+		"build": "vue-cli-service build",
+		"lint": "vue-cli-service lint"
+	},
+	"dependencies": {
+		"vue": "^2.5.16"
+	},
+	"devDependencies": {
+		"@vue/cli-plugin-babel": "^3.0.0-rc.2",
+		"@vue/cli-plugin-eslint": "^3.0.0-rc.2",
+		"@vue/cli-service": "^3.0.0-rc.2",
+		"@vue/eslint-config-prettier": "^3.0.0-rc.2",
+		"node-sass": "^4.9.0",
+		"sass-loader": "^7.0.3",
+		"vue-template-compiler": "^2.5.16"
+	},
+	"eslintConfig": {
+		"root": true,
+		"env": {
+			"node": true
+		},
+		"extends": [
+			"eslint:recommended",
+			"plugin:vue/recommended",
+			"@vue/prettier"
+		],
+		"rules": {
+			"vue/html-indent": "tab",
+			"vue/max-attributes-per-line": 3,
+			"no-console": "warn"
+		},
+		"parserOptions": {
+			"parser": "babel-eslint"
+		}
+	},
+	"postcss": {
+		"plugins": {
+			"autoprefixer": {}
+		}
+	},
+	"browserslist": [
+		"> 1%",
+		"last 2 versions",
+		"not ie <= 11"
+	],
+	"prettier": {
+		"useTabs": true,
+		"semi": false,
+		"singleQuote": false,
+		"bracketSpacing": true,
+		"trailingComma": "es5"
+	},
+	"stylelint": {
+		"extends": "stylelint-config-standard",
+		"rules": {
+			"indentation": "tab"
+		}
+	}
 }
