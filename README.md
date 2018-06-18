@@ -13,6 +13,13 @@ Features:
 * Most hard-coded style decisions can be overridden by CSS variables
 * Any other style decisions are up to you, using normal CSS rules
 * Slotted content
+* You can have multiple sidebars (left and right, for example).
+
+## Demo
+Here's a live demo page:
+https://www.tallent.us/vue-nav-side/
+
+Note that in the demo, the *contents* of the sidebar are purposefully bare -- this is where you would add and style your own content, such as a navigation tree or accordion, a configuration/property panel, or whatever else you like. The component is simply a wrapper to enforce the open/closed state and provides a minimal default style.
 
 ## Example
 
@@ -79,10 +86,6 @@ This is the transition time for moving between the "closed" and "open" state. Th
 
 ## Default style
 In addition to the variables above, the component has a default off-white background color (#f0f0f0) and small right border in light grey (1px #e0e0e0), scrolls vertically if needed, and renders its children using flexbox (each child as a row). These were chosen as sensible defaults for a side navigation component, but you can override them using normal CSS. I suggest targeting something like `.vue-nav-side.my-class` to override the styling rather than using `style` attributes or using `!important` directives.
-
-## Demo
-Here's a live demo page:
-https://www.tallent.us/vue-nav-side/
 
 ## Browser compatibility
 This component does not support Internet Explorer 11 or below, due to the use of CSS variables. I'm no longer targeting IE11 in any of my personal or projects, and don't have a means of testing it easily. Other than that, any browser with flexbox support should work fine.

@@ -35,8 +35,8 @@
 			"@vue/prettier"
 		],
 		"rules": {
-			"vue/html-indent": "tab",
-			"vue/max-attributes-per-line": 3,
+			"vue/html-indent": 0,
+			"vue/max-attributes-per-line": 0,
 			"no-console": "warn"
 		},
 		"parserOptions": {
