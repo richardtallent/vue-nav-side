@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <nav-side :value="value" :class="{ 'nav-is-overlay': isOverlay }">
-		<p>Here's the sidebar.</p>
+		<p>Here's a sidebar.</p>
 		<p>You can put anything you like here.</p>
 		<p>There's very little default styling, other than the background color, right border, flexbox, and vertical auto-scroll.</p>
 
@@ -9,22 +9,15 @@
 		<center><button class="button is-info" @click="changeNavVisibility">{{ navVisibilityMode }}</button></center>
 
 	</nav-side>
-	<div>
-		<div class="hero">
-			<div class="hero-body">
-				<div class="container">
-					<h1 class="title">vue-nav-side 0.1</h1>
-					<h2 class="subtitle">Highly-configurable, minimalist sidebar navigation control for VueJS applications.</h2>
-				</div>
-			</div>
-		</div>
+	<div class="right-side">
+
+		<h1 class="title">vue-nav-side 0.1</h1>
+		<h2 class="subtitle">Highly-configurable, minimalist sidebar navigation control for VueJS applications.</h2>
 		<div class="container is-fluid">
 			<article class="message is-info">
 				<div class="message-body">
 					This demo page uses Bulma as a CSS baseline. The component does not rely on Bulma, but works reasonably well
-					with it. The exception is that Bulma assumes it controls the entire page, which can cause its breakpoints to
-					not work well when the nagivation is present, as you can see from the content here. I recommend not using
-					Bulma's responsive layout classes when using this component in auto-open mode.
+					with it.
 				</div>
 			</article>
 
@@ -95,3 +88,9 @@ export default {
 	},
 }
 </script>
+<style>
+.right-side {
+	overflow-y: auto;
+	padding: 2rem;
+}
+</style>
