@@ -4,25 +4,26 @@
 	"description": "Minimalist side navigation component for Vue",
 	"author": "richardtallent <richard@tallent.us>",
 	"license": "MIT",
-	"main": "dist/vue-nav-side.js",
+	"main": "dist/NavSide.umd.js",
 	"repository": "https://github.com/richardtallent/vue-nav-side",
 	"private": false,
 	"scripts": {
 		"serve": "vue-cli-service serve",
 		"build": "vue-cli-service build",
+		"bundle": "vue-cli-service build --target lib --name NavSide ./src/components/bundle.js",
 		"lint": "vue-cli-service lint"
 	},
 	"dependencies": {
-		"vue": "^2.5.16"
+		"vue": "^2.5.17"
 	},
 	"devDependencies": {
-		"@vue/cli-plugin-babel": "^3.0.0-rc.2",
-		"@vue/cli-plugin-eslint": "^3.0.0-rc.2",
-		"@vue/cli-service": "^3.0.0-rc.2",
-		"@vue/eslint-config-prettier": "^3.0.0-rc.2",
+		"@vue/cli-plugin-babel": "^3.0.1",
+		"@vue/cli-plugin-eslint": "^3.0.1",
+		"@vue/cli-service": "^3.0.1",
+		"@vue/eslint-config-prettier": "^3.0.1",
 		"node-sass": "^4.9.0",
-		"sass-loader": "^7.0.3",
-		"vue-template-compiler": "^2.5.16"
+		"sass-loader": "^7.0.1",
+		"vue-template-compiler": "^2.5.17"
 	},
 	"eslintConfig": {
 		"root": true,
@@ -30,29 +31,27 @@
 			"node": true
 		},
 		"extends": [
-			"eslint:recommended",
 			"plugin:vue/recommended",
 			"@vue/prettier"
 		],
 		"rules": {
-			"vue/html-indent": 0,
-			"vue/max-attributes-per-line": 0,
-			"no-console": "warn"
+			"vue/html-indent": [
+				"error",
+				"tab"
+			],
+			"vue/max-attributes-per-line": "off",
+			"no-console": "warn",
+			"vue/attributes-order": "error",
+			"vue/html-quotes": [
+				"error",
+				"double"
+			],
+			"vue/order-in-components": "error"
 		},
 		"parserOptions": {
 			"parser": "babel-eslint"
 		}
 	},
-	"postcss": {
-		"plugins": {
-			"autoprefixer": {}
-		}
-	},
-	"browserslist": [
-		"> 1%",
-		"last 2 versions",
-		"not ie <= 11"
-	],
 	"prettier": {
 		"useTabs": true,
 		"semi": false,
@@ -65,5 +64,15 @@
 		"rules": {
 			"indentation": "tab"
 		}
-	}
+	},
+	"postcss": {
+		"plugins": {
+			"autoprefixer": {}
+		}
+	},
+	"browserslist": [
+		"> 1%",
+		"last 2 versions",
+		"not ie <= 11"
+	]
 }

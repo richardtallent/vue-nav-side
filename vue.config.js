@@ -1,8 +1,11 @@
 // vue.config.js
 module.exports = {
-	configureWebpack: () => {
-		if (process.env.NODE_ENV === "production") {
-			return { output: { publicPath: "./" } }
-		}
-	},
+	baseUrl: "",
+	outputDir: undefined,
+	assetsDir: undefined,
+	runtimeCompiler: undefined,
+	productionSourceMap: false,
+	parallel: undefined,
+	css: undefined,
+	lintOnSave: undefined,
 }

@@ -1,60 +1,59 @@
 <template>
-  <div id="app">
-    <nav-side :value="value" :class="{ 'nav-is-overlay': isOverlay }">
-		<p>Here's a sidebar.</p>
-		<p>You can put anything you like here.</p>
-		<p>There's very little default styling, other than the background color, right border, flexbox, and vertical auto-scroll.</p>
+	<div id="app">
+		<nav-side :value="value" :class="{ 'nav-is-overlay': isOverlay }">
+			<p>Here's a sidebar.</p>
+			<p>You can put anything you like here.</p>
+			<p>There's very little default styling, other than the background color, right border, flexbox, and vertical auto-scroll.</p>
+			<p>Here's another button to change the visibility mode.</p>
+			<center><button class="button is-info" @click="changeNavVisibility">{{ navVisibilityMode }}</button></center>
+		</nav-side>
+		<div class="right-side">
 
-		<p>Here's another button to change the visibility mode.</p>
-		<center><button class="button is-info" @click="changeNavVisibility">{{ navVisibilityMode }}</button></center>
+			<h1 class="title">vue-nav-side 0.1</h1>
+			<h2 class="subtitle">Highly-configurable, minimalist sidebar navigation control for VueJS applications.</h2>
+			<div class="container is-fluid">
 
-	</nav-side>
-	<div class="right-side">
+				<article class="message is-info">
+					<div class="message-body">
+						This demo page uses Bulma as a CSS baseline. The component does not rely on Bulma, but works reasonably well
+						with it.
+					</div>
+				</article>
 
-		<h1 class="title">vue-nav-side 0.1</h1>
-		<h2 class="subtitle">Highly-configurable, minimalist sidebar navigation control for VueJS applications.</h2>
-		<div class="container is-fluid">
-			<article class="message is-info">
-				<div class="message-body">
-					This demo page uses Bulma as a CSS baseline. The component does not rely on Bulma, but works reasonably well
-					with it.
+				<article class="message is-info">
+					<div class="message-body">
+						<a href="https://www.github.com/richardtallent/vue-nav-side">Here's the repository on GitHub</a>, which is where you'll find the documentation.
+					</div>
+				</article>
+
+				<div class="card">
+					<div class="card-content">
+						<h3 class="subtitle">Visibility Mode</h3>
+						<p>Using the button below, you can toggle between the three supported states: open, closed, and auto-open (1, -1, and 0).</p>
+						<center><br>
+							<button class="button is-info" @click="changeNavVisibility">{{ navVisibilityMode }}</button>
+						</center><br>
+						<p>For most applications, you would use a hamburger menu or similar interaction to change the mode.</p>
+					</div>
 				</div>
-			</article>
 
-			<article class="message is-info">
-				<div class="message-body">
-					<a href="https://www.github.com/richardtallent/vue-nav-side">Here's the repository on GitHub</a>, which is where you'll find the documentation.
+				<div class="card">
+					<div class="card-content">
+						<h3 class="subtitle">Overlay Mode</h3>
+						<p>Using the button below, you can toggle the "overlay" mode.</p>
+						<center><br>
+							<button class="button is-info" @click="changeIsOverlay">{{ isOverlay }}</button>
+						</center>
+					</div>
 				</div>
-			</article>
 
-			<div class="card">
-				<div class="card-content">
-					<h3 class="subtitle">Visibility Mode</h3>
-					<p>Using the button below, you can toggle between the three supported states: open, closed, and auto-open (1, -1, and 0).</p>
-					<center><br>
-						<button class="button is-info" @click="changeNavVisibility">{{ navVisibilityMode }}</button>
-					</center><br>
-					<p>For most applications, you would use a hamburger menu or similar interaction to change the mode.</p>
-				</div>
 			</div>
-
-			<div class="card">
-				<div class="card-content">
-					<h3 class="subtitle">Overlay Mode</h3>
-					<p>Using the button below, you can toggle the "overlay" mode.</p>
-					<center><br>
-						<button class="button is-info" @click="changeIsOverlay">{{ isOverlay }}</button>
-					</center>
-				</div>
-			</div>
-	
 		</div>
 	</div>
-  </div>
 </template>
 
 <script>
-import NavSide from "./components/vue-nav-side.vue"
+import NavSide from "./components/NavSide.vue"
 
 export default {
 	name: "App",
